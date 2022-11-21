@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Page Title</title>
+  </head>
+  <body>
+  
+  <h1>Exemplos de microsserviços em Flask</h1>
+  
+  <h2>Enpoints implementados para testes. Entrada e sáida de dados em formato JSON</h2>
+  
+  <ul>
+    <li><b>/pessoas [GET]</b>: retorna com a lista de todas as pessoas </li>
+    <li><b>/pessoa/numerodoCPF [GET]</b>: retorna os dados de uma pessoa pelo CPF. Exemplo: <i>/pessoa/12312312311</i>  </li>
+    <li><b>/pessoa/numerodoCPF [DELETE]</b>: remove um CPF tendo retorno ok se removido ou not_found se o CPF não for encontrado. Exemplo: <i>/pessoa/12312312311</i>  </li>
+    <li><b>/pessoa [POST]</b>: insere ou atualiza uma pessoa tendo com corpo de entrada um objeto JSON. Se o CPF mencionado for encontrado, os dados são atualizados. Senão, a nova pessoa é inserida. Exemplo:
+    
+    <p><i>
+    	{
+            "nome": "José", 
+            "sobrenome": "Souza",
+            "CPF": "34534534577", 
+            "data_nascimento": "19450312"
+        }
+    </i></p>
+    
+    </li>
+  </ul>  
+  
+  </body>
+</html>
